@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url("background.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 100px;
+  
+  background-color: black;
+  
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 76px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  
+}
+.sidenav a:hover{
+  color:blue;   
+    }
+
+
+
+}
+ul a{
+    padding: 6px 8px 26px 16px;
+    text-decoration: none;
+    font-size: 40px;
+}
+ul a:hover{
+    color: blue ;
+}
+.logo-img{
+    width:500px;
+    height:80px;
+    position:fixed;
+    top:10px;
+}
+
+
+@media screen and (max-height: 450px) {
+  #sidenav {padding-top: 15px;}
+  #sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+
+<div class="sidenav">
+  
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+  <a href="#careers">Careers</a>
+</div>
+<div class="logo-img"><img src="logo.png" alt="logo" ></div>
+    

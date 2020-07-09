@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+<link rel="stylesheet" href="slideshow.css">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-image: url("background.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 100px;
+  
+  background-color: black;
+  
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 76px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  
+}
+.sidenav a:hover{
+  color:blue;   
+    }
+
+
+.about {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  margin-top:100px;
+  height:500px;
+  background-image: url(about_us.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.service{
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  margin-top:100px;
+  height:600px;
+  background-image: url(background_services.jpeg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.product{
+  margin-left: 160px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  margin-top:100px;
+  height:500px;
+  background-image: url(products.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ul a{
+    padding: 6px 8px 26px 16px;
+    text-decoration: none;
+    font-size: 40px;
+}
+ul a:hover{
+    color: blue ;
+}
+.logo-img{
+    width:500px;
+    height:80px;
+    position:fixed;
+    top:10px;
+}
+.service-img{
+  width: 400px;
+  height: 220px;
+  border-radius:30%;
+  padding-left:60px;
+  padding-top: 30px;
+
+}
+
+@media screen and (max-width: 500px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+    .service{
+        height: auto;
+    }
+}
+</style>
+</head>
+<body>
+
+
+<div class="sidenav">
+  
+  <a href="#about">About Us</a>
+  <a href="#services">Services</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact</a>
+  <a href="#careers">Careers</a>
+</div>
+<div class="logo-img"><img src="logo.png" alt="logo" ></div>
+<div class="about" id="about">
+    <div class="slideshow-container">
+<div class="mySlides fade">
+  
+  <img src="about1.gif" style="width:100%; height: 500px;">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="about2.jpg" style="width:100%; height: 500px;">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="system_integration.jpg" style="width:100%; height: 500px;">
+  
+</div>
+</div>
+    </div>  
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  
+  slides[slideIndex-1].style.display = "block";  
+  
+  setTimeout(showSlides, 5500); // Change image every 2 seconds
+}
+</script>
+<div class="service" id="services">
+    
+    
+    <a href="copy.html"><img class="service-img" src="management_consulting.jpg" alt="manage"></a>
+    <a href="#"><img class="service-img" src="software_development.jpg" alt="software"></a>
+    <a href="#"><img class="service-img" src="system_integration.jpg" alt="system"></a>
+    <a href="#"><img class="service-img" src="ecommerce.jpg" alt="ecommerce"></a>
+    <a></a>
+</div> 
+<div class="product" id="products">
+    <h2>Products</h2>
+    <ul>
+    <li><a href="#ewms">eWMS</a></li>
+    <li><a href="#ecommerce">Ecommerce</a></li>
+    <li><a href="#iretail">iRetail</a></li>
+    <li><a href="#biometric">Biometric</a></li>
+    <li><a href="#trucking">Trucking Portal</a></li>
+    </ul>
+</body>
+</html> 
